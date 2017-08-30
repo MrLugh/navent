@@ -1,0 +1,34 @@
+<article id="property-{{id}}" class="item">
+	<div class="item-child item-media carousel">
+		{{#images}}
+			<div class="carousel-item bg-cover" style="background-image:url('{{.}}');">
+				<img src="{{.}}">
+			</div>
+		{{/images}}
+
+		<strong class="highlight">Super Destacado</strong>
+
+		<i class="fa fa-heart heart heart-border"></i>
+		<i class="fa fa-heart-o heart heart-toggle"></i>
+
+		<a href="#" class="item-media-arrow item-media-arrow-left">
+			<i class="fa fa-angle-left"></i>
+		</a>
+		<a href="#" class="item-media-arrow item-media-arrow-right">
+			<i class="fa fa-angle-right"></i>
+		</a>
+	</div>
+	<div class="item-child item-main">
+		<h4 class="item-main-title"><a href="#">{{title}}</a></h4>
+		<div class="item-main-location"><i class="fa fa-map-marker"></i> {{location}}</div>
+		<div class="item-main-description">{{description}}</div>
+		<div class="item-main-price">
+			U$S <span class="item-main-price-quantity">{{priceFormatted}}</span>
+			<em class="item-main-price-unity">$/m² <span class="item-main-price-unity-formatted">{{priceUnityFormatted}}</span></em>
+		</div>
+	</div>
+	<div class="item-child item-footer">
+		<button class="btn-flat contact">contactar</button>
+		<ul class="item-footer-list">{{#attributes}}<li>{{.}}</li>{{/attributes}}</ul>
+	</div>
+</article>
