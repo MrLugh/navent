@@ -25,20 +25,20 @@
 
 	<section id="list" class="container-fluid"></section>
 
-  <div id="modal" class="modal">
+  <form id="modal" class="modal" onsubmit="">
     <div class="modal-content">
       <h4>Para ser contactado por favor ingrese su direccìón de correo electrónico</h4>
       <form>
         <div class="input-field">
-          <input id="email" type="email" class="validate">
+          <input id="email" type="email" class="validate" required oninvalid="this.setCustomValidity('Por favor, introduzca un mail válido!')" oninput="setCustomValidity('')">
           <label for="email" data-error="verifique el formato del email" data-success="">Email
         </label>
       </form>
     </div>
     <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Enviar</a>
+      <button type="submit" class="modal-action waves-effect waves-green btn-flat">Enviar</button>
     </div>
-  </div>  
+  </form>  
 
 </body>
 </html>
